@@ -18,7 +18,37 @@ public class Vote extends Auditable {
     @GeneratedValue
     private Long id;
 
-    @NonNull
+    public Vote(short direction, Link link) {
+		super();
+		this.direction = direction;
+		this.link = link;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public short getDirection() {
+		return direction;
+	}
+
+	public void setDirection(short direction) {
+		this.direction = direction;
+	}
+
+	public Link getLink() {
+		return link;
+	}
+
+	public void setLink(Link link) {
+		this.link = link;
+	}
+
+	@NonNull
     private short direction;
 
     @NonNull
